@@ -1,0 +1,66 @@
+<div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Tracker</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Task Tracker : Manage Your Tasks</h1>
+                <button id="themeToggle">Enable Dark Mode</button>
+            </header>
+            <form id="taskForm" class="task-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="High">High</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Add Task</button>
+            </form>
+            
+    <div class="controls">
+        <div class="form-group">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect">
+                <option value="dueDate">Due Date</option>
+                <option value="priority">Priority</option>
+                <option value="title">Title</option>
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="filterStatus">Filter by Status:</label>
+            <select id="filterStatus">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+    </div>
+    
+    <section id="taskList" class="task-list"></section>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+    </html>
+    
+</div>
